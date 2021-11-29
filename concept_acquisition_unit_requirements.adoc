@@ -25,7 +25,8 @@ You must install an Acquisition Unit (AU) in order to acquire information from y
 |Operating system	
 |A computer running a licensed version of one of the following:
 
-* Centos (64-bit): 7.2 through 7.9, 8.1 through 8.4
+* CentOS (64-bit): 7.2 through 7.9, 8.1 through 8.4
+* CentOS 8 Stream
 * Debian (64-bit): 9 and 10
 * Oracle Enterprise Linux (64-bit): 7.5 through 7.9, 8.1 through 8.4
 * Red Hat Enterprise Linux (64-bit): 7.2 through 7.9, 8.1 through 8.4
