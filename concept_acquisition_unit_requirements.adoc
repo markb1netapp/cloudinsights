@@ -33,7 +33,7 @@ You must install an Acquisition Unit (AU) in order to acquire information from y
 
 This computer should be running no other application-level software. A dedicated server is recommended. 
 
-// NOTE: CentOS 8 will reach End-of-Life December 31, 2021. Cloud Insights will support _CentOS 8 Stream_ going forward.
+Note: CentOS 8.x support is being replaced with CentOS 8 Stream support. CentOS 8.x will reach End-of-Life on December 31, 2021.
 
 |A computer running a licensed version of one of the following:
 
