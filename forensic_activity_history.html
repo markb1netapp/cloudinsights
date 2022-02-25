@@ -1905,7 +1905,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-24 15:26:49 +0000">02/24/2022</time>
+    <time datetime="2022-02-25 15:25:08 +0000">02/25/2022</time>
     
   
 
@@ -2080,11 +2080,15 @@ This page provides an overview of activities in your environment, highlighting t
 <li>
 <p><strong>Protocol</strong> to fetch protocol-specific activities.</p>
 </li>
-<li>
-<p><strong>Noise Reduction</strong> to filter activities on temporary files which are generated as part of the normal operating process. If noise reduction is enabled, temporary files of extension .tmp, .ldb, .laccdb, .$db etc. are filtered.</p>
-</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
 <li>
 <p><strong>Username</strong> of the user performing the activity. You need to provide the exact Username to filter. Search with partial username, or partial username prefixed or suffixed with ‘*’ will not work.</p>
+</li>
+<li>
+<p><strong>Noise Reduction</strong> to filter files which are created in the last 2 hours by the user. It is also used to filter temporary files (for example, .tmp files) accessed by the user.</p>
 </li>
 </ul>
 </div>
@@ -2189,6 +2193,15 @@ or<br>
 2. A User Directory Collector has been configured, however it has stopped or is in error state. Please go to <strong>Admin &gt; Data Collectors &gt; User Directory Collectors</strong> and check the status. Refer to the <a href="http://docs.netapp.com/us-en/cloudinsights/task_config_user_dir_connect.html#troubleshooting-user-directory-collector-configuration-errors">User Directory Collector troubleshooting</a> section of the documentation for troubleshooting tips.<br>
 After configuring properly, the name will get automatically resolved within 24 hours.<br>
 If it still does not get resolved, check if you have added the correct User Data Collector. Make sure that the user is indeed part of the added Active Directory/LDAP Directory Server.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Some NFS events are not seen in UI.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Check the following:<br>
+1.	A user directory collector for AD server with POSIX attributes set should be running with the unixid attribute enabled from UI.<br>
+2.	Any user doing NFS access should be seen when searched in the user page from UI<br>
+3.	Raw events (Events for whom the user is not yet discovered) are not supported for NFS<br>
+4.	Anonymous access to the NFS export will not be monitored.<br>
+5.	Make sure NFS version used in lesser than NFS4.1.</p></td>
 </tr>
 </tbody>
 </table>

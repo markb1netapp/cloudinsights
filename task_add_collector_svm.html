@@ -1905,7 +1905,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-24 15:26:49 +0000">02/24/2022</time>
+    <time datetime="2022-02-25 15:25:08 +0000">02/25/2022</time>
     
   
 
@@ -2307,7 +2307,7 @@ Sample output should look like:<br>
 <br>
 <a href="https://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.dot-cm-nmg%2FGUID-969851BB-4302-4645-8DAC-1B059D81C5B2.html">Check firewall commands</a> on the ONTAP side.<br>
 <br>
-4. SSH to the SVM/Cluster which you want to monitor. Ping the Agent box from the SVM management lif (with CIFS, NFS protocols support) and ensure that ping is working:<br>
+4. SSH to the SVM/Cluster which you want to monitor. Ping the Agent box from the SVM data lif (with CIFS, NFS protocols support) and ensure that ping is working:<br>
 <br>
  <em>network ping -vserver &lt;vserver name&gt; -destination &lt;Agent IP&gt; -lif &lt;Lif Name&gt; -show-detail</em><br>
 <br>
@@ -2330,7 +2330,7 @@ Please ensure that there are no errors related to fpolicy.<br>
 <br>
 3. If no activities are seen, please login to the SVM. Enter the following command<br>
 <em>&lt;SVM&gt;fpolicy show</em><br>
-Please check if the fpolicy policy named with prefix “metadata_service” has been set and status is “on”. If not set, then most likely the Agent is unable to execute the commands in the SVM. Please ensure all the prerequisites as described in the beginning of the page have been followed.</p></td>
+Check if the fpolicy policy named with prefix “cloudsecure_” has been set and status is “on”. If not set, then most likely the Agent is unable to execute the commands in the SVM. Please ensure all the prerequisites as described in the beginning of the page have been followed.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">SVM Data Collector is in error state and Errror message is “Agent failed to connect to the collector”</p></td>
