@@ -1905,7 +1905,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-02 18:45:22 +0000">03/02/2022</time>
+    <time datetime="2022-03-02 19:00:23 +0000">03/02/2022</time>
     
   
 
@@ -1979,6 +1979,27 @@
 <div class="sect1">
 <h2 id="troubleshooting">Troubleshooting</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>with this data collector:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Problem:</th>
+<th class="tableblock halign-left valign-top">Try this:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">I&#8217;m seeing the following error while trying to connect to Azure CVO: "The certificate signing request to broker/manager CA service was not completed."</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Verify that your Cloud manager proxy settings are set to the Cloud Manager private IP. Cloud Manager installation may set a different proxy. Once the proxy is set to the correct IP and you reference the proxy in the Cloud Connector dialog, the connection to Cloud Insights should connect successfully.</p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Additional information on this Data Collector may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
 </div>
