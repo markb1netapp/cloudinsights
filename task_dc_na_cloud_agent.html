@@ -1896,7 +1896,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-02 18:01:29 +0000">03/02/2022</time>
+    <time datetime="2022-03-02 18:10:22 +0000">03/02/2022</time>
     
   
 
@@ -1915,8 +1915,68 @@
 </p>
 
 
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph lead">
-<p>This pasge is obsolete. Please go to <a href="https:task_dc_na_cloud_connection.html">this page instead</a>.</p>
+<p>This page is obsolete and will not be updated. Please go to <a href="https:task_dc_na_cloud_connection.html">this page instead</a>.</p>
+</div>
+<div class="paragraph">
+<p>This data collector creates a cloud connection to support data collection from ONTAP 9.9+ CVO, AFF, and FAS systems.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="configuration">Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Cloud Insights collects data from ONTAP 9.9+ using a <strong>cloud connection</strong>, eliminating the need to install an external acquisition unit, simplifying troubleshooting, maintenance, and initial deployment. Configuration of the cloud connection for the ONTAP 9.9+ data collector requires you to copy a <strong>Pairing Code</strong> to the ONTAP System Manager, which will then establish a connection to your Cloud Insights environment. After the connection is established, the data collected is the same as it would be if it was collected through an acquisition unit.</p>
+</div>
+<div class="paragraph">
+<p>This data collector supports ONTAP 9.9+ CVO, AFF, and FAS systems.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Cloud_Agent_DC.png" alt="Cloud Agent Data Collector Configuration"></span></p>
+</div>
+<div class="paragraph">
+<p>Follow these steps to configure the connection:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Generate a unique token which will be used to establish the connection to the ONTAP system.</p>
+</li>
+<li>
+<p>Copy the Pairing Code, which includes the token. You can view the pairing code by clicking on <em>[+] Reveal Code Snippet</em>.</p>
+<div class="paragraph">
+<p>Once you copy the pairing code, the data collector configuration screen will reveal a step 6, prompting you to wait for the connection to be established. Nothing more needs to be done on this screen until the connection is established.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="./media/Cloud_Agent_Step_Waiting.png" alt="Waiting for connection"></span></p>
+</div>
+</li>
+<li>
+<p>In a new browser tab, log into the ONTAP System Manager and navigate to <em>Cluster &gt; Settings &gt; Cloud Connections</em>.</p>
+</li>
+<li>
+<p>Click <em>Add Cloud Connection</em> and paste the pairing code.</p>
+</li>
+<li>
+<p>Return to the Cloud Insights browser tab and wait for the connection to be established. Once it is established, a <em>Complete</em> button is revealed.</p>
+</li>
+<li>
+<p>Click <em>Complete</em>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="troubleshooting">Troubleshooting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Additional information on this Data Collector may be found from the <a href="concept_requesting_support.html">Support</a> page or in the <a href="https://docs.netapp.com/us-en/cloudinsights/CloudInsightsDataCollectorSupportMatrix.pdf">Data Collector Support Matrix</a>.</p>
+</div>
+</div>
 </div>
 
     </article>
