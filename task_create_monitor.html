@@ -1905,7 +1905,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-03-02 18:11:10 +0000">03/02/2022</time>
+    <time datetime="2022-03-02 18:25:19 +0000">03/02/2022</time>
     
   
 
@@ -2102,6 +2102,34 @@ To create a multi-condition monitor (e.g., IOPS &gt; X and latency &gt; Y), defi
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="./media/Webhook_Monitor_Notifications.png" alt="Webhook Alerting"></span></p>
+</div>
+<div class="sect3">
+<h4 id="warning-vs-critical-vs-resolved-alerting">Warning vs. Critical vs. Resolved alerting</h4>
+<div class="paragraph">
+<p>Whether a monitor sends a Warning, Critical, or Resolved alert notification depends on which threshold is crossed:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Crossing from non-triggered to WARNING - Send Warning Alert</p>
+</li>
+<li>
+<p>Crossing from non-triggered to CRITICAL - Send Critical Alert</p>
+</li>
+<li>
+<p>Crossing from WARNING to CRITICAL - Send Critical Alert</p>
+</li>
+<li>
+<p>Crossing from CRITICAL to WARNING - Send Warning Alert</p>
+</li>
+<li>
+<p>Crossing from WARNING to Non-Triggered - Send RESOLVED Alert</p>
+</li>
+<li>
+<p>Crossing from CRITICAL to Non-Triggered - Send RESOLVED Alert</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect2">
